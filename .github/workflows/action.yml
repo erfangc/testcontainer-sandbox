@@ -31,8 +31,8 @@ on:
 name: Run integration test
 
 jobs:
-  deploy:
-    name: Build and Deploy
+  test:
+    name: Test
     runs-on: ubuntu-latest
     environment: production
 
@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup JDK 11
+      - name: Setup JDK 16
         uses: actions/setup-java@v2
         with:
           java-version: '16'
